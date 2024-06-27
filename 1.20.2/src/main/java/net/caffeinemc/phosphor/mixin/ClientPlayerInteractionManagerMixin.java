@@ -3,7 +3,6 @@ package net.caffeinemc.phosphor.mixin;
 import net.caffeinemc.phosphor.common.Phosphor;
 import net.caffeinemc.phosphor.api.event.events.AttackEntityEvent;
 import net.caffeinemc.phosphor.gui.AsteriaMenu;
-import net.caffeinemc.phosphor.module.modules.combat.ReachModule;
 import net.minecraft.client.network.ClientPlayerInteractionManager;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
