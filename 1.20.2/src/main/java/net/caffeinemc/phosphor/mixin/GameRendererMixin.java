@@ -14,21 +14,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(GameRenderer.class)
 public class GameRendererMixin {
-    @ModifyConstant(method = "updateTargetedEntity", constant = @Constant(doubleValue = 3))
-    private double updateTargetedEntityModifySurvivalReach(double d) {
-        ReachModule reachModule = Phosphor.moduleManager().getModule(ReachModule.class);
-        if (reachModule.isEnabled()) return reachModule.entityReach.getValue();
-
-        return d;
-    }
-
-    @ModifyConstant(method = "updateTargetedEntity", constant = @Constant(doubleValue = 9))
-    private double updateTargetedEntityModifySquaredMaxReach(double d) {
-        ReachModule reachModule = Phosphor.moduleManager().getModule(ReachModule.class);
-        if (reachModule.isEnabled()) return reachModule.entityReach.getValue() * reachModule.entityReach.getValue();
-
-        return d;
-    }
 
     @Inject(method = "renderWorld", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/profiler/Profiler;pop()V", shift = At.Shift.BEFORE))
     private void onPostWorldRender(float tickDelta, long limitTime, MatrixStack matrices, CallbackInfo ci) {
