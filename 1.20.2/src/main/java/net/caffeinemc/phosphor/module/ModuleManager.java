@@ -100,7 +100,6 @@ public class ModuleManager {
 		addModule(new HitboxesModule());
 		addModule(new InventoryTotemModule());
 		addModule(new PotRefillModule());
-		addModule(new ReachModule());
 		addModule(new SilentAimModule());
 		addModule(new SnowballThrowModule());
 		addModule(new TriggerBotModule());
