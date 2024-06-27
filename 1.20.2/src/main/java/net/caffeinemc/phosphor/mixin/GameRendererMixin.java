@@ -2,7 +2,6 @@ package net.caffeinemc.phosphor.mixin;
 
 import net.caffeinemc.phosphor.api.event.events.WorldRenderEvent;
 import net.caffeinemc.phosphor.common.Phosphor;
-import net.caffeinemc.phosphor.module.modules.combat.ReachModule;
 import net.minecraft.client.render.GameRenderer;
 import net.minecraft.client.util.math.MatrixStack;
 import org.spongepowered.asm.mixin.Mixin;
